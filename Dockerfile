@@ -6,10 +6,6 @@ RUN poetry install
 ENTRYPOINT poetry run flask run --host=0.0.0.0
 
 
-
-
-# Perform common operations, dependency installation etc...
-
 FROM base as production
 ENV FLASK_DEBUG=false
 ENTRYPOINT poetry run flask run --host=0.0.0.0
