@@ -66,7 +66,7 @@ docker build --target production --tag todo-app:prod .
 ``` 
 docker run --env-file .env -it -p 5001:5000 todo-app:prod
 ```
-This command pases through the environment variables, `-it` makes it easier to interact with the container, the app can be accessed at port `http://localhost:5001`  
+This command pases through the environment variables with the `--env-file` flag, and the `-it` flags make it easier to interact with the container (e.g. allowing us to shut it down with ctrl+c from our host terminal). With the `-p` flag, the app can be accessed at the address `http://localhost:5001`.
 
 ### Command to run dev container
 ``` 
