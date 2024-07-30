@@ -73,3 +73,8 @@ This command pases through the environment variables with the `--env-file` flag,
 docker run --env-file .env -it -p 5001:5000 --mount "type=bind,source=$(pwd)/todo_app,target=/app/todo_app" todo-app:dev
 ```
 Bind mount is miroring a folder and the folder in this instance is the todo app folder allowing changes to the code without having to rebuild the container. Running dev changes without having to access the container 
+
+### Running Pytest
+```
+poetry run pytest
+```

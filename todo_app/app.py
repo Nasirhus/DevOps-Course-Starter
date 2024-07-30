@@ -20,5 +20,3 @@ def new_todo():
     todo = request.form.get("user todo")
     item = add_item(todo)
     return redirect('/')
-
-    
