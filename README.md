@@ -75,6 +75,6 @@ docker run --env-file .env -it -p 5001:5000 --mount "type=bind,source=$(pwd)/tod
 Bind mount is miroring a folder and the folder in this instance is the todo app folder allowing changes to the code without having to rebuild the container. Running dev changes without having to access the container 
 
 ### Running Pytest
-```
+```bash
 poetry run pytest
 ```
