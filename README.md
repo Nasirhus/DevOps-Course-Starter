@@ -78,3 +78,18 @@ Bind mount is miroring a folder and the folder in this instance is the todo app 
 ```bash
 poetry run pytest
 ```
+
+
+### Azure Hosting 
+The container image that is deployed on Azure is hosted on Docker Hub at https://hub.docker.com/repository/docker/nashussain76/todo-app/general
+
+The website is hosted at https://nashusappservice.azurewebsites.net/
+
+To update the website you will need to run the following commands to build and push the updated container image:
+```Bash
+docker build --target production --tag nashussain76/todo-app:prod .
+docker push nashussain76/todo-app:prod
+```
+Next you will need to make a POST request to the webhook link provided on the App Service (under the Deployment Centre tab)> This will trigger Azure to pull the updated image from Docker Hub (link not provided as it includes credentials)
+
+
