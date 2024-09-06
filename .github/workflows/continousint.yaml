@@ -30,3 +30,5 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_HUB_NASHU }}
         password: ${{ secrets.DOCKER_HUB_DUPASSWORD }}
+    - run: docker build --tag nashussain76/todo-app:prod --target production .
+    - run: docker push nashussain76/todo-app:prod
